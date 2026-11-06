@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline Resume Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Left Sidebar: Input Form -->
+    <aside class="sidebar no-print">
+      <h2>Resume Builder</h2>
+      
+      <div class="control-actions">
+        <label for="templateSelect">Template:</label>
+        <select id="templateSelect">
+          <option value="template-modern">Modern Clean</option>
+          <option value="template-classic">Classic Serif</option>
+          <option value="template-minimal">Minimal Tech</option>
+        </select>
+      </div>
+
+      <div class="control-actions">
+        <button id="exportPdfBtn" class="btn primary-btn">Export as PDF</button>
+        <button id="saveJsonBtn" class="btn secondary-btn">Save Data (JSON)</button>
+        <label class="btn file-btn">
+          Load Data (JSON)
+          <input type="file" id="loadJsonInput" accept=".json" style="display:none;" />
+        </label>
+      </div>
+
+      <form id="resumeForm">
+        <!-- Personal Details -->
+        <fieldset>
+          <legend>Personal Info</legend>
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="inputName" placeholder="e.g. Ishani Karmakar" />
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="inputEmail" placeholder="e.g. user@example.com" />
+          </div>
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="text" id="inputPhone" placeholder="e.g. +91 9876543210" />
+          </div>
+          <div class="input-group">
+            <label>Location / Links</label>
+            <input type="text" id="inputLinks" placeholder="e.g. GitHub: github.com/username | Purulia, WB" />
+          </div>
+          <div class="input-group">
+            <label>Summary</label>
+            <textarea id="inputSummary" rows="3" placeholder="Brief professional summary..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Technical Skills -->
+        <fieldset>
+          <legend>Skills</legend>
+          <div class="input-group">
+            <textarea id="inputSkills" rows="3" placeholder="e.g. Python, SQL, HTML, CSS, JavaScript"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Projects -->
+        <fieldset>
+          <legend>Projects (Separate each with a blank line)</legend>
+          <div class="input-group">
+            <textarea id="inputProjects" rows="6" placeholder="Project Name: Online Voting System&#10;Tech: PHP, MySQL&#10;Details: Designed database schema and authentication module."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Education -->
+        <fieldset>
+          <legend>Education</legend>
+          <div class="input-group">
+            <textarea id="inputEducation" rows="4" placeholder="Degree / College: BCA, Bengal Institute of Science & Technology&#10;Year: 2024 - 2027"></textarea>
+          </div>
+        </fieldset>
+      </form>
+    </aside>
+
+    <!-- Right Workspace: Live A4 Preview -->
+    <main class="preview-area">
+      <div id="resumeSheet" class="a4-sheet template-modern">
+        <header class="resume-header">
+          <h1 id="previewName">Your Full Name</h1>
+          <div class="contact-line">
+            <span id="previewEmail">email@example.com</span>
+            <span id="previewPhone">+91 0000000000</span>
+            <span id="previewLinks">GitHub | LinkedIn</span>
+          </div>
+        </header>
+
+        <section class="resume-section" id="sectionSummary">
+          <h3 class="section-title">Professional Summary</h3>
+          <p id="previewSummary">Enter your summary from the left panel to update this live.</p>
+        </section>
+
+        <section class="resume-section" id="sectionSkills">
+          <h3 class="section-title">Technical Skills</h3>
+          <p id="previewSkills">Languages, frameworks, databases, and development tools.</p>
+        </section>
+
+        <section class="resume-section" id="sectionProjects">
+          <h3 class="section-title">Projects</h3>
+          <div id="previewProjects" class="project-list">
+            <!-- Dynamic entries render here -->
+          </div>
+        </section>
+
+        <section class="resume-section" id="sectionEducation">
+          <h3 class="section-title">Education</h3>
+          <div id="previewEducation">
+            <!-- Dynamic entries render here -->
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
