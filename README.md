@@ -18,4 +18,6 @@ Navigate into the folder:cd resume-builder
 
 Open index.html directly in any modern web browser (Google Chrome, Edge, Brave, Firefox).Note: Disconnect your Wi-Fi or turn on Airplane Mode—everything runs completely offline.
 
-✅ "Done When" Verification Checklist[x] Runs Offline: Fully functional with Wi-Fi turned off; requires no external CDNs or network requests.[x] Selectable Text in PDF: Exported PDF retains vector fonts; words can be highlighted, selected, and copied.[x] Data Restore: Loading a saved .json file cleanly repopulates all text fields and template choices.[x] A4 Page Layout: Pre-configured print layout ensuring standard A4 margins.👤 AuthorDeveloper: Ishani KarmakarInternship: GenAI Internship (Week 2) — Bharat Space Education Research Centre
+✅ "Done When" Verification Checklist[x] Runs Offline: Fully functional with Wi-Fi turned off; requires no external CDNs or network requests.[x] Selectable Text in PDF: Exported PDF retains vector fonts; words can be highlighted, selected, and copied.[x] Data Restore: Loading a saved .json file cleanly repopulates all text fields and template choices.[x] A4 Page Layout: Pre-configured print layout ensuring standard A4 margins.
+
+👤 AuthorDeveloper: Ishani KarmakarInternship: GenAI Internship (Week 2) — Bharat Space Education Research Centre
